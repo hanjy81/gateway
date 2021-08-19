@@ -44,21 +44,25 @@ spring:
     gateway:
       routes:
         - id: rental
-          uri: http://localhost:8081
+          uri: http://rental:8080
           predicates:
             - Path=/rentals/** 
         - id: payment
-          uri: http://localhost:8082
+          uri: http://payment:8080
           predicates:
             - Path=/payments/** 
         - id: delivery
-          uri: http://localhost:8083
+          uri: http://delivery:8080
           predicates:
             - Path=/deliveries/** 
         - id: product
-          uri: http://localhost:8084
+          uri: http://product:8080
           predicates:
-            - Path=/products/** 
+            - Path=/products/**
+        - id: mypage
+          uri: http://mypage:8080
+          predicates:
+            - Path=/myPages/**
       globalcors:
         corsConfigurations:
           '[/**]':
