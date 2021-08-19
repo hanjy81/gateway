@@ -94,14 +94,14 @@ phases:
                #       timeoutSeconds: 2
                #       periodSeconds: 5
                #       failureThreshold: 10
-                    livenessProbe:
-                      httpGet:                         # 아래 liness 테스트시 이부분 삭제
-                        path: /actuator/health         # 아래 liness 테스트시 이부분 삭제
-                        port: 8080                     # 아래 liness 테스트시 이부분 삭제
-                      initialDelaySeconds: 120         # 아래 liness 테스트시 이부분 삭제
-                      timeoutSeconds: 2                # 아래 liness 테스트시 이부분 삭제
-                      periodSeconds: 5                 # 아래 liness 테스트시 이부분 삭제
-                      failureThreshold: 5              # 아래 liness 테스트시 이부분 삭제     
+               #     livenessProbe:
+               #       httpGet:                         # 아래 liness 테스트시 이부분 삭제
+               #         path: /actuator/health         # 아래 liness 테스트시 이부분 삭제
+               #         port: 8080                     # 아래 liness 테스트시 이부분 삭제
+               #       initialDelaySeconds: 120         # 아래 liness 테스트시 이부분 삭제
+               #       timeoutSeconds: 2                # 아래 liness 테스트시 이부분 삭제
+               #       periodSeconds: 5                 # 아래 liness 테스트시 이부분 삭제
+               #       failureThreshold: 5              # 아래 liness 테스트시 이부분 삭제     
                 #      exec: #liveness
                 #        command: #liveness
                 #        - cat    #liveness
