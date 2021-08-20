@@ -1,9 +1,8 @@
 version: 0.2
-     
+    
 env:
   variables:
     _PROJECT_NAME: "user5-gateway"
-
 phases:
   install:
     runtime-versions:
@@ -47,8 +46,10 @@ phases:
             labels:
               app: $_PROJECT_NAME
           spec:
+            type: LoadBalancer
            # type: LoadBalancer
             ports:
+              - port: 80
               - port: 8080
                 targetPort: 8080
             selector:
@@ -60,7 +61,6 @@ phases:
           kind: Deployment
           metadata:
             name: $_PROJECT_NAME
-            namespace:: gr5
             labels:
               app: $_PROJECT_NAME
           spec:
